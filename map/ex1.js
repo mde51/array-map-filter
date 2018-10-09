@@ -22,7 +22,13 @@ En sortie: [
  */
 
 function getStringsLength(strings) {
+  let map2 = strings.map(function(mot){
+    return mot + " contains " + mot.length + " characters";
+  })
+  return map2;
 }
+
+
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1

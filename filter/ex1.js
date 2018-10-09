@@ -12,6 +12,10 @@ Sortie attendue:
  */
 
 function getPositiveNumbers(numbers) {
+	function check (num){
+		return num >= 0;
+	}
+	return numbers.filter(check);
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,

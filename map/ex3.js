@@ -59,7 +59,20 @@ En sortie:
 
  */
 
+
 function getMoviesFreshness(movies) {
+  let tableau = [];
+  for (let i = 0; i < movies.length; i ++){
+      if (movies[i].rating < 60) {
+        movies[i].label = "rotten";
+      }
+      else if (movies[i].rating > 75) {
+        movies[i].label = "certified fresh";
+      }
+      else {movies[i].label = "fresh";}
+  }
+  return movies;
+    
 }
 
 

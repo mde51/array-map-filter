@@ -1,16 +1,12 @@
 /* Array.prototype.filter - Exercice 4
-
 Ecrire une fonction filterOnPrice, qui attend 2 arguments:
 1. Un tableau d'objets représentant des produits, chacun ayant deux propriétés:
   - name
   - price
 2. Un prix maximum
-
 La fonction doit renvoyer un tableau ne contenant que les produits ne dépassant pas le prix
 maximum.
-
 Exemple d'entrée:
-
 1. tableau de produits:
 [
   { name: 'iPhone X', price: 1159 },
@@ -20,7 +16,6 @@ Exemple d'entrée:
   { name: 'Huawei P20 Pro', price: 649 }
 ]
 2. prix maximum: 500
-
 Sortie attendue:
   [
     { name: 'Xiaomi Mi A2', price: 209 },
@@ -29,6 +24,11 @@ Sortie attendue:
  */
 
 function filterOnPrice(products, maxPrice) {
+  let tableau = products.filter(function(product, price){
+    price = maxPrice;
+    if (product.price <= price){return product}
+  })
+  return tableau;
 }
 
 // Ne pas modifier l'export

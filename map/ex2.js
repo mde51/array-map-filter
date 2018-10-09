@@ -43,6 +43,15 @@ En sortie: [
  */
 
 function getFoodCategories(foods) {
+  let tableau = foods.map(function(objet){
+      if (objet.isVegetarian == true){
+          return objet.food + " is suitable for vegetarians";
+      }
+      else {
+          return objet.food + " is not suitable for vegetarians";
+      }
+  })
+  return tableau;
 }
 
 

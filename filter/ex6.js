@@ -1,12 +1,9 @@
 /* Array.prototype.filter - Exercice 6
-
 Ecrire une fonction filterOffensiveComments, qui attend deux paramètres, tous deux
 des tableaux de chaînes de caractères :
 1. des commentaires sur un fil d'actualité ou une vidéo.
 2. une liste de mots "grossiers" ou "offensifs" à bannir
-
 La fonction doit éliminer les commentaires contenant au moins un des mots "bannis".
-
 Exemple d'entrée:
 1. des commentaires (on est resté soft pour ne pas heurter les oreilles chastes)
 [
@@ -17,16 +14,22 @@ Exemple d'entrée:
   'There is no "better", it depends on your use case, DAMN YOU'
 ]
 2. mots à bannir: ['bloody', 'damn']
-
 Sortie attendue:
 [
   "Very useful tutorial, thank you so much!",
   "Which one is better, React or Angular?",
 ]
-
 */
 
 function filterOffensiveComments(comments, bannedWords) {
+	let tableau = comments.filter(function(comment, mot){
+      mot = bannedWords;
+      	let motMaj = mot[0].toUpperCase();
+      	let motMaj2 = mot[1].toUpperCase();
+      	if ((comment.includes(mot[0]) == false && comment.includes(motMaj) == false) && (comment.includes(mot[1]) == false && comment.includes(motMaj2) == false)) { return comment;}
+      
+  })
+  return tableau;
 }
 
 // Ne pas modifier l'export
